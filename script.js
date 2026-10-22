@@ -115,9 +115,9 @@ async function loadGitHub(){
     const langCount={};
     repos.forEach(r=>{if(r.language)langCount[r.language]=(langCount[r.language]||0)+1});
     const topLang=Object.entries(langCount).sort((a,b)=>b[1]-a[1])[0];
-    const pinnedNames=['Sleep360','CareerConnect','RecallIQ---Customer-Re-Engagement-Agent','StudyNotion'];
-    const pinnedRepos=pinnedNames.map(n=>repos.find(r=>r.name===n)).filter(Boolean);
-    const showRepos=pinnedRepos.length ? pinnedRepos : repos.slice(0,6);
+    const pinnedNames=['Sleep360','StudyNotion','RecallIQ---Customer-Re-Engagement-Agent'];
+    const pinnedRepos=pinnedNames.map(n=>repos.find(r=>r.name.toLowerCase()===n.toLowerCase())).filter(Boolean);
+    const showRepos=pinnedRepos;
     const latestRepo=repos[0];
 
     document.getElementById('ghRepos').textContent=user.public_repos ?? repos.length;
@@ -138,10 +138,11 @@ async function loadGitHub(){
     `).join('');
   }catch(e){
     ['ghRepos','ghLang','ghPinned','ghCommit'].forEach(id=>{
-      const labels={ghRepos:'Public',ghLang:'JavaScript',ghPinned:'4+',ghCommit:'API limited'};
+      const labels={ghRepos:'Public',ghLang:'JavaScript',ghPinned:'3',ghCommit:'API limited'};
       document.getElementById(id).textContent=labels[id];
     });
-    document.getElementById('ghReposList').innerHTML=PROJECTS.filter(p=>p.github).slice(0,6).map(p=>`
+    const featuredFallback=['Sleep360','StudyNotion','RecallIQ'];
+    document.getElementById('ghReposList').innerHTML=featuredFallback.map(name=>PROJECTS.find(p=>p.title===name)).filter(Boolean).map(p=>`
       <a href="${p.github}" target="_blank" rel="noopener" class="gh-repo-card">
         <div class="gh-repo-name"><i class="fas fa-code-branch"></i>${escapeHtml(p.title)}</div>
         <div class="gh-repo-desc">${escapeHtml(p.subtitle)}</div>
