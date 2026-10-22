@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Khushi Rai - Software Engineer & Full Stack Developer</title>
+<meta name="description" content="Khushi Rai - Software Engineer, Full Stack MERN Developer, and ML Enthusiast at SRM IST Chennai."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+</head>
+<body>
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-logo">KR</div>
+  <div class="loader-bar"><div class="loader-fill"></div></div>
+</div>
+
+<!-- PARTICLES -->
+<div id="particles"></div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">KR.</div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+    <a href="#contact" class="hire-btn magnetic" aria-label="Hire Khushi">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#hero" onclick="closeMobileNav()">Home</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#skills" onclick="closeMobileNav()">Skills</a>
+  <a href="#experience" onclick="closeMobileNav()">Experience</a>
+  <a href="#projects" onclick="closeMobileNav()">Projects</a>
+  <a href="#github" onclick="closeMobileNav()">GitHub</a>
+  <a href="#certifications" onclick="closeMobileNav()">Certifications</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid" style="position:relative;z-index:1">
+    <div class="hero-content">
+      <div class="hero-badge"><span></span> Open to Opportunities</div>
+      <h1 class="hero-h1">Hi, I'm <span class="grad-text">Khushi Rai</span></h1>
+      <div class="typed-wrap"><span id="typed"></span><span style="color:var(--accent);animation:blink 1s infinite">|</span></div>
+      <p class="hero-desc">Building intelligent software that solves real-world problems. CSE student at SRM IST specializing in Full Stack Development & Machine Learning.</p>
+      <div class="hero-btns">
+        <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-primary magnetic" aria-label="Open Khushi Rai resume PDF"><i class="fas fa-eye"></i> View Resume</a>
+        <a href="assets/resume.pdf" class="btn btn-outline magnetic" download="Khushi-Rai-Resume.pdf" aria-label="Download Khushi Rai resume PDF"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="#contact" class="btn btn-outline magnetic" aria-label="Contact Khushi Rai"><i class="fas fa-paper-plane"></i> Contact Me</a>
+        <a href="#projects" class="btn btn-ghost magnetic" aria-label="View featured projects"><i class="fas fa-code"></i> View Projects</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/khushir11" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/khushi-rai-2653192aa" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:raikhushi9652@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="#contact" class="social-icon magnetic" aria-label="Contact Me"><i class="fas fa-paper-plane"></i></a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="photo-ring">
+        <img src="assets/profile-photo.jpg" class="photo-img" id="photoEl" alt="Khushi Rai professional profile photo" loading="eager" decoding="async"/>
+      </div>
+      <div class="float-badge fb1"><span><i class="fab fa-react"></i></span> React.js</div>
+      <div class="float-badge fb2"><span><i class="fab fa-python"></i></span> Python</div>
+      <div class="float-badge fb3"><span><i class="fas fa-brain"></i></span> ML / AI</div>
+      <div class="float-badge fb4"><span><i class="fab fa-aws"></i></span> AWS</div>
+    </div>
+  </div>
+  <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:var(--text3);font-size:0.8rem;display:flex;flex-direction:column;align-items:center;gap:0.5rem;animation:bounce 2s infinite">
+    <span>Scroll</span><i class="fas fa-chevron-down"></i>
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about">
+  <div class="reveal">
+    <div class="section-label">01 / About Me</div>
+    <h2 class="section-title">Who I Am</h2>
+  </div>
+  <div class="about-grid" style="margin-top:3rem">
+    <div class="about-text reveal">
+      <p>Hi, I'm <strong>Khushi Rai</strong>, a Computer Science Engineering student specializing in Software Engineering at SRM Institute of Science and Technology (2023-2027).</p>
+      <p>I enjoy designing <strong>scalable web applications</strong> and <strong>AI-powered software</strong> that solve practical problems. My interests span Full Stack Development, Machine Learning, Artificial Intelligence, Cloud Computing, and Data Structures & Algorithms.</p>
+      <p>I love learning new technologies, building impactful products, participating in hackathons, and continuously improving my software engineering skills.</p>
+      <div class="interest-tags">
+        <span class="tag">Full Stack Dev</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">AI Applications</span>
+        <span class="tag">Cloud Computing</span>
+        <span class="tag">DSA</span>
+        <span class="tag">Hackathons</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="about-stats">
+        <div class="stat-card"><div class="stat-num">8.46</div><div class="stat-label">CGPA / 10</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="6" data-prefix="">6+</div><div class="stat-label">Major Projects</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="200" data-prefix="">200+</div><div class="stat-label">Problems Solved</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="4" data-prefix="">4+</div><div class="stat-label">Certifications</div></div>
+      </div>
+      <div style="margin-top:1.5rem;display:flex;gap:0.75rem;flex-wrap:wrap">
+        <a href="https://github.com/khushir11" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.85rem"><i class="fab fa-github"></i> GitHub Profile</a>
+        <a href="https://www.linkedin.com/in/khushi-rai-2653192aa" target="_blank" rel="noopener" class="btn btn-outline" style="font-size:0.85rem"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="reveal">
+    <div class="section-label">02 / Technical Skills</div>
+    <h2 class="section-title">What I Work With</h2>
+    <p class="section-subtitle">A curated toolkit built through projects, internships, and continuous self-learning.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-category reveal">
+      <div class="skill-cat-header"><div class="skill-cat-icon" style="background:rgba(99,102,241,0.1);color:#6366f1"><i class="fas fa-code"></i></div><div class="skill-cat-title">Programming Languages</div></div>
+      <div class="skill-pills"><span class="skill-pill">Python</span><span class="skill-pill">Java</span><span class="skill-pill">JavaScript</span><span class="skill-pill">SQL</span></div>
+    </div>
+    <div class="skill-category reveal">
+      <div class="skill-cat-header"><div class="skill-cat-icon" style="background:rgba(6,182,212,0.1);color:#06b6d4"><i class="fas fa-palette"></i></div><div class="skill-cat-title">Frontend</div></div>
+      <div class="skill-pills"><span class="skill-pill">React.js</span><span class="skill-pill">HTML5</span><span class="skill-pill">CSS3</span></div>
+    </div>
+    <div class="skill-category reveal">
+      <div class="skill-cat-header"><div class="skill-cat-icon" style="background:rgba(16,185,129,0.1);color:#10b981"><i class="fas fa-server"></i></div><div class="skill-cat-title">Backend</div></div>
+      <div class="skill-pills"><span class="skill-pill">Node.js</span><span class="skill-pill">Express.js</span><span class="skill-pill">Flask</span><span class="skill-pill">REST APIs</span></div>
+    </div>
+    <div class="skill-category reveal">
+      <div class="skill-cat-header"><div class="skill-cat-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b"><i class="fas fa-database"></i></div><div class="skill-cat-title">Databases</div></div>
+      <div class="skill-pills"><span class="skill-pill">MongoDB</span><span class="skill-pill">MySQL</span></div>
+    </div>
+    <div class="skill-category reveal">
+      <div class="skill-cat-header"><div class="skill-cat-icon" style="background:rgba(236,72,153,0.1);color:#ec4899"><i class="fas fa-cloud"></i></div><div class="skill-cat-title">Cloud & Tools</div></div>
+      <div class="skill-pills"><span class="skill-pill">AWS Cloud</span><span class="skill-pill">Git</span><span class="skill-pill">GitHub</span><span class="skill-pill">VS Code</span><span class="skill-pill">Postman</span></div>
+    </div>
+    <div class="skill-category reveal">
+      <div class="skill-cat-header"><div class="skill-cat-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6"><i class="fas fa-brain"></i></div><div class="skill-cat-title">Core CS & ML</div></div>
+      <div class="skill-pills"><span class="skill-pill">DSA</span><span class="skill-pill">OOP</span><span class="skill-pill">DBMS</span><span class="skill-pill">OS</span><span class="skill-pill">Machine Learning</span><span class="skill-pill">AI</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="reveal">
+    <div class="section-label">03 / Experience</div>
+    <h2 class="section-title">Work Experience</h2>
+  </div>
+  <div class="timeline" style="margin-top:3rem;max-width:800px">
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="exp-card">
+        <div class="exp-top">
+          <div class="exp-title-row">
+            <div class="company-logo" aria-hidden="true">FC</div>
+            <div>
+            <div class="exp-title">Software Development Intern</div>
+            <div class="exp-company"><i class="fas fa-building" style="margin-right:0.4rem"></i>FranConnect India Software Pvt. Ltd.</div>
+            </div>
+          </div>
+          <div class="exp-date">Dec 2025 - Jan 2026</div>
+        </div>
+        <div class="exp-tech">
+          <span>SaaS</span><span>Application Workflows</span><span>Manual Testing</span><span>Quality Assurance</span>
+        </div>
+        <ul class="exp-resp">
+          <li>Completed a four-week internship gaining exposure to FranConnect’s cloud-based SaaS platform for franchise and multi-location business management.</li>
+          <li>Explored application workflows to understand user interactions and expected application behavior.</li>
+          <li>Learned fundamental manual testing practices, including checking functionality and identifying unexpected behavior.</li>
+          <li>Communicated potential issues to mentors for review and feedback.</li>
+          <li>Gained introductory knowledge of software quality assurance, product workflows, and maintaining reliable applications.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <div class="section-label">04 / Projects</div>
+    <h2 class="section-title">Featured Work</h2>
+    <p class="section-subtitle">A selection of projects built with passion, ranging from AI systems to full-stack web apps.</p>
+  </div>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<!-- GITHUB -->
+<section id="github">
+  <div class="reveal">
+    <div class="section-label">05 / GitHub</div>
+    <h2 class="section-title">GitHub Showcase</h2>
+    <p class="section-subtitle">Live stats and repositories pulled directly from the GitHub API.</p>
+  </div>
+  <div class="github-stats-grid" id="ghStats" style="margin-top:2rem">
+    <div class="gh-stat"><div class="gh-stat-val" id="ghRepos">-</div><div class="gh-stat-label">Public Repositories</div></div>
+    <div class="gh-stat"><div class="gh-stat-val" id="ghLang">-</div><div class="gh-stat-label">Most Used Language</div></div>
+    <div class="gh-stat"><div class="gh-stat-val" id="ghPinned">-</div><div class="gh-stat-label">Pinned Projects</div></div>
+    <div class="gh-stat"><div class="gh-stat-val" id="ghCommit">-</div><div class="gh-stat-label">Latest Commit Activity</div></div>
+  </div>
+  <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:600;margin-top:2.5rem;margin-bottom:1rem;color:var(--text2)">Pinned Projects</h3>
+  <div class="gh-repos" id="ghReposList"><p class="gh-loading"><i class="fas fa-spinner fa-spin"></i> Loading repositories...</p></div>
+  <div style="margin-top:1.5rem;text-align:center">
+    <a href="https://github.com/khushir11" target="_blank" rel="noopener" class="btn btn-outline"><i class="fab fa-github"></i> View All on GitHub</a>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="reveal">
+    <div class="section-label">06 / Certifications</div>
+    <h2 class="section-title">Credentials</h2>
+  </div>
+  <div class="certs-grid" id="certsGrid"></div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+  <div class="reveal">
+    <div class="section-label">07 / Achievements</div>
+    <h2 class="section-title">Milestones</h2>
+  </div>
+  <div class="achieve-grid" style="margin-top:2rem">
+    <div class="achieve-card reveal"><div class="achieve-icon" style="background:rgba(99,102,241,0.1);color:#6366f1"><i class="fas fa-code"></i></div><div class="achieve-text"><h4>200+ Coding Problems</h4><p>Solved on LeetCode, GeeksforGeeks, and similar platforms</p></div></div>
+    <div class="achieve-card reveal"><div class="achieve-icon" style="background:rgba(6,182,212,0.1);color:#06b6d4"><i class="fas fa-rocket"></i></div><div class="achieve-text"><h4>AI & Full Stack Projects</h4><p>Built 6+ production-quality projects independently</p></div></div>
+    <div class="achieve-card reveal"><div class="achieve-icon" style="background:rgba(16,185,129,0.1);color:#10b981"><i class="fas fa-briefcase"></i></div><div class="achieve-text"><h4>Software Dev Internship</h4><p>Completed internship at FranConnect India Software Pvt. Ltd.</p></div></div>
+    <div class="achieve-card reveal"><div class="achieve-icon" style="background:rgba(245,158,11,0.1);color:#f59e0b"><i class="fas fa-trophy"></i></div><div class="achieve-text"><h4>Hack Summit 5.0</h4><p>Participated in a major national-level hackathon</p></div></div>
+    <div class="achieve-card reveal"><div class="achieve-icon" style="background:rgba(236,72,153,0.1);color:#ec4899"><i class="fas fa-bolt"></i></div><div class="achieve-text"><h4>Ossome Hacks 2.0</h4><p>Competed and submitted a working prototype</p></div></div>
+    <div class="achieve-card reveal"><div class="achieve-icon" style="background:rgba(139,92,246,0.1);color:#8b5cf6"><i class="fas fa-star"></i></div><div class="achieve-text"><h4>DAYZERO Hackathon</h4><p>Participated and built under time constraints</p></div></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="reveal">
+    <div class="section-label">08 / Education</div>
+    <h2 class="section-title">Academic Background</h2>
+  </div>
+  <div style="margin-top:3rem">
+    <div class="edu-card reveal">
+      <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div>
+        <div class="edu-title">SRM Institute of Science and Technology</div>
+        <div class="edu-sub">B.Tech Computer Science Engineering (Software Engineering)</div>
+        <div class="edu-meta">Chennai, India &nbsp;|&nbsp; 2023 - 2027</div>
+        <div class="edu-cgpa">CGPA: 8.46 / 10</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <div class="section-label">09 / Contact</div>
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">I'm currently open to internship and full-time opportunities. Drop me a message!</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="contact-item">
+        <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+        <div class="contact-item-text"><h4>Email</h4><a href="mailto:raikhushi9652@gmail.com">raikhushi9652@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+        <div class="contact-item-text"><h4>GitHub</h4><a href="https://github.com/khushir11" target="_blank" rel="noopener">github.com/khushir11</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+        <div class="contact-item-text"><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/khushi-rai-2653192aa" target="_blank" rel="noopener">linkedin.com/in/khushi-rai</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="contact-item-text"><h4>Location</h4><p>Chennai, India</p></div>
+      </div>
+      <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:0.5rem">
+        <a href="mailto:raikhushi9652@gmail.com" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Me</a>
+        <button class="btn btn-outline" onclick="scrollToSection('projects')"><i class="fas fa-code"></i> View Work</button>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required/>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Hi Khushi, I'd love to discuss..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center" id="submitBtn">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="#hero">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+    <a href="#experience">Experience</a><a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+  </div>
+  <div class="footer-socials">
+    <a href="https://github.com/khushir11" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/khushi-rai-2653192aa" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="mailto:raikhushi9652@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+  </div>
+  <div class="footer-copy">Made by Khushi Rai &nbsp;|&nbsp; &copy; 2026 All Rights Reserved</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle">Project Details</div>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
