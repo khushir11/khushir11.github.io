@@ -164,14 +164,43 @@ const showRepos = [
       const labels={ghRepos:'Public',ghLang:'JavaScript',ghPinned:'3',ghCommit:'API limited'};
       document.getElementById(id).textContent=labels[id];
     });
-    const featuredFallback=['Sleep360','StudyNotion','RecallIQ'];
-    document.getElementById('ghReposList').innerHTML=featuredFallback.map(name=>PROJECTS.find(p=>p.title===name)).filter(Boolean).map(p=>`
-      <a href="${p.github}" target="_blank" rel="noopener" class="gh-repo-card">
-        <div class="gh-repo-name"><i class="fas fa-code-branch"></i>${escapeHtml(p.title)}</div>
-        <div class="gh-repo-desc">${escapeHtml(p.subtitle)}</div>
-        <div class="gh-repo-meta"><span>${escapeHtml(p.tech[0])}</span><span>Portfolio fallback</span></div>
-      </a>
-    `).join('');
+    
+const featuredFallback = [
+  {
+    title: 'Sleep360',
+    subtitle: 'AI Smart Sleep Monitoring System',
+    tech: ['Python'],
+    github: 'https://github.com/khushir11/Sleep360'
+  },
+  {
+    title: 'StudyNotion',
+    subtitle: 'Learning Management System',
+    tech: ['React.js', 'Node.js'],
+    github: 'https://github.com/khushir11/StudyNotion'
+  },
+  {
+    title: 'RecallIQ',
+    subtitle: 'AI Customer Re-engagement Agent',
+    tech: ['JavaScript', 'Node.js'],
+    github: 'https://github.com/khushir11/RecallIQ---Customer-Re-Engagement-Agent'
+  }
+];
+
+document.getElementById('ghReposList').innerHTML =
+  featuredFallback.map(p => `
+    <a href="${p.github}" target="_blank" rel="noopener noreferrer"
+       class="gh-repo-card">
+      <div class="gh-repo-name">
+        <i class="fas fa-code-branch"></i>${escapeHtml(p.title)}
+      </div>
+      <div class="gh-repo-desc">${escapeHtml(p.subtitle)}</div>
+      <div class="gh-repo-meta">
+        <span>${escapeHtml(p.tech.join(', '))}</span>
+        <span>Featured Project</span>
+      </div>
+    </a>
+  `).join('');
+
   }
 }
 // CONTACT FORM
