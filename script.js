@@ -115,9 +115,32 @@ async function loadGitHub(){
     const langCount={};
     repos.forEach(r=>{if(r.language)langCount[r.language]=(langCount[r.language]||0)+1});
     const topLang=Object.entries(langCount).sort((a,b)=>b[1]-a[1])[0];
-    const pinnedNames=['Sleep360','StudyNotion','RecallIQ---Customer-Re-Engagement-Agent'];
-    const pinnedRepos=pinnedNames.map(n=>repos.find(r=>r.name.toLowerCase()===n.toLowerCase())).filter(Boolean);
-    const showRepos=pinnedRepos;
+const showRepos = [
+  {
+    name: 'Sleep360',
+    description: 'AI-powered sleep monitoring and attendance risk prediction.',
+    language: 'Python',
+    stargazers_count: 0,
+    forks_count: 0,
+    html_url: 'https://github.com/khushir11/Sleep360'
+  },
+  {
+    name: 'StudyNotion',
+    description: 'MERN-stack e-learning platform with course management and learning progress.',
+    language: 'JavaScript',
+    stargazers_count: 0,
+    forks_count: 0,
+    html_url: 'https://github.com/khushir11/StudyNotion'
+  },
+  {
+    name: 'RecallIQ',
+    description: 'AI-powered customer re-engagement agent.',
+    language: 'JavaScript',
+    stargazers_count: 0,
+    forks_count: 0,
+    html_url: 'https://github.com/khushir11/RecallIQ---Customer-Re-Engagement-Agent'
+  }
+];
     const latestRepo=repos[0];
 
     document.getElementById('ghRepos').textContent=user.public_repos ?? repos.length;
